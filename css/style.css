@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v7/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff) format('woff');
+}
+
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/* Fade-in animation ----------- */
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-ms-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+/* device small */
+
+li {list-style-type:none; padding-bottom: 5px;}
+
+ul {padding: 0px; margin: 0px; list-style-type: none;}
+
+body, html {
+  height: 100%;
+  background: #FFF;
+  font-family: -apple-system, 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.wrap {
+  height: 100%;
+  color: #2C3E50;
+	font-size: 24px;
+	line-height: 32px;
+	font-weight: 400;
+	position: relative;
+  padding: 32px;
+  -webkit-font-smoothing: antialiased;	
+}
+
+.wrap .link {
+  color: #2C3E50;
+  text-decoration: none;
+  border-bottom: 1px solid #F62459;
+	-webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; 
+}
+
+.wrap .link:hover {
+  color: #F62459;
+}
+
+.fadeIn {
+	opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+	-ms-animation:fadeIn ease-in 1;
+	-o-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+	
+ 	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+	-ms-animation-fill-mode:forwards;
+	-o-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+	
+ 	-webkit-animation-duration:0.7s;
+  -moz-animation-duration:0.7s;
+	-ms-animation-duration:0.7s;
+	-o-animation-duration:0.7s;
+  animation-duration:0.7s;	
+}
+
+.header {
+  font-weight: 600;
+  color: #2C3E50;
+  font-size: 14px;
+	 
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-ms-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+.copy {
+  margin-bottom: 48px;
+	
+	-webkit-animation-delay: 1.2s;
+	-moz-animation-delay: 1.2s;
+	-ms-animation-delay: 1.2s;
+	-o-animation-delay: 1.2s;
+	animation-delay: 1.2s;
+}
+
+.social {
+	font-size: 22px;
+  text-decoration: none;
+  padding-bottom: 32px; 
+	 
+	-webkit-animation-delay: 1.9s;
+	-moz-animation-delay: 1.9s;
+	-ms-animation-delay: 1.9s;
+	-o-animation-delay: 1.9s;
+	animation-delay: 1.9s;
+}
+
+.social .soc_link {
+  color: #2C3E50;
+}
+
+.social .soc_link:hover {
+  color: ##2C3E50;
+  border-bottom: 1px solid ##2C3E50;
+	padding-bottom: 5px;
+}
+
+.social a {
+  border-bottom: 1px solid #F62459;
+  color: #2C3E50;
+  text-decoration: none;
+	-webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+	-ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.social a:hover {
+  border-bottom: 1px solid #F62459;
+  color: #F62459;
+	padding-bottoms: 5px;
+}
+
+.social span {
+	display: none;
+}
+
+::selection {
+  color: white;
+  background: #F62459;
+}
+
+/* device mid */
+@media only screen and (min-width : 768px){
+	
+li {display:inline;}
+
+.copy {
+	width: 75%;
+}
+
+.wrap {
+  padding: 48px;
+}
+
+
+.social {
+	font-size: 18px; 
+}
+
+.social span {
+	display: inline;
+}	
+
+/* device large */
+@media only screen and (min-width : 1024px){ 
+
+.wrap {
+  padding: 64px;
+}
+
